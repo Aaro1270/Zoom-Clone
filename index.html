@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Realtime Communication with WebRTC</title>
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    
+    <body>
+    
+      <style>
+        body {
+            background-image:url("/assets/cornerView.png");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+   
+    <h1>Realtime communication with WebRTC</h1>
+  
+    <div id="videos">
+      <video id="localVideo" autoplay="" muted=""></video>
+      <video id="remoteVideo" autoplay=""></video>
+    </div>
+  
+    <div class="chatBox">
+      <textarea id="msg" name="msgTxt" rows="2" cols="40">      This is where the user can type messages.
+      </textarea>
+    
+      <br><br>
+      
+      <input type="submit" value="Submit">
+      
+  
+    </div>
+    
+    <div class="menu">
+  
+      <a id="mute" href="#mute">Mute</a>
+    
+      <a id="call" href="#videoOff">Video Off</a>
+  
+      <a id="hangup" href="#end">End</a>
+  
+    </div>
+  
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="public/script.js"></script>
+    
+  
+  
+  
+    </body>
+</html>
