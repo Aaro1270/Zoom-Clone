@@ -1,14 +1,22 @@
 'use strict';
 
 var isChannelReady = false;
+
 var isInitiator = false;
 var isStarted = false;
+
 var localStream;
+
 var pc;
+
 var remoteStream;
 var turnReady;
+
 var username = prompt('Enter username')
 var password = prompt('Enter password')
+
+var room = prompt('Enter room name:');
+
 
 var pcConfig = {
   'iceServers': [{
@@ -28,9 +36,6 @@ var sdpConstraints = {
 
 /////////////////////////////////////////////
 
-var room = 'foo';
-// Could prompt for room name:
-// room = prompt('Enter room name:');
 
 var socket = io.connect();
 

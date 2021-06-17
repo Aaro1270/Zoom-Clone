@@ -9,8 +9,8 @@ var fs = require('fs');
 var fileServer = new(nodeStatic.Server)();
 
 const options = {
-  key: fs.readFileSync('cert.key', 'utf8'),
-  cert: fs.readFileSync('cert.crt', 'utf8')
+  key: fs.readFileSync('SSL/cert.key', 'utf8'),
+  cert: fs.readFileSync('SSL/cert.crt', 'utf8')
 }
 
 var app = https.createServer(options ,function(req, res) {
